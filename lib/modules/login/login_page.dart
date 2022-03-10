@@ -78,12 +78,6 @@ class LoginPage extends GetView<LoginController> {
                     ),
                   ),
                 ),
-                //Obx(() {
-                //  return Text(
-                //    controller.nome.value,
-                //    style: TextStyle(fontSize: 50, color: Colors.red),
-                //  );
-                //})
               ],
             ),
           )
