@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "919435861273",
+    "project_id": "app-top-filmes",
+    "storage_bucket": "app-top-filmes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919435861273:android:4792e6ec04c0349dd8f988",
+        "android_client_info": {
+          "package_name": "com.example.app_top_filmes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919435861273-ddef1aa7d2ul2oelkecaqek0mc0mslq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_top_filmes",
+            "certificate_hash": "178a20db7fd039b217d8e3431da90802e5141108"
+          }
+        },
+        {
+          "client_id": "919435861273-0g6ia9vjkhoembsobii4ddu5v912fp8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACxCZ6WPaYVeR-6ImOvKvp4T4vszhpYik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919435861273-0g6ia9vjkhoembsobii4ddu5v912fp8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
