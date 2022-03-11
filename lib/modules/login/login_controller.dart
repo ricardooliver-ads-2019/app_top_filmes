@@ -26,10 +26,7 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
       loading(true);
       await _loginService.login();
       loading(false);
-      //await Future.delayed(Duration(seconds: 2));
-      //await 2.seconds.delay();
       message(MessageModel.info(title: 'Sucesso', message: 'Login realizado com sucesso'));
-      //await 2.seconds.delay();
     } catch (e, s) {
       print(e);
       print(s);
