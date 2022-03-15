@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app_top_filmes/modules/movies/movies_controller.dart';
 import 'package:app_top_filmes/modules/movies/widgets/filter_tag.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class MoviesFilters extends StatelessWidget {
+class MoviesFilters extends GetView<MoviesController> {
 
   const MoviesFilters({ Key? key }) : super(key: key);
 
@@ -13,11 +15,16 @@ class MoviesFilters extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            FilterTag(),
-          ],
-        ),
+        child: Obx(() { 
+            return Row(
+              children:  controller.genres.map((g) => FilterTag(
+                model: g,
+                onPressed: (){},
+                selected: false,
+              )).toList()
+            );
+          }
+        )
       ),
     );
   }
