@@ -3,7 +3,6 @@ import 'package:app_top_filmes/repositories/genres/genres_repository.dart';
 import 'package:app_top_filmes/repositories/genres/genres_repository_impl.dart';
 import 'package:app_top_filmes/services/genres/genres_service.dart';
 import 'package:app_top_filmes/services/genres/genres_service_impl.dart';
-import 'package:app_top_filmes/services/movies/movies_service.dart';
 import 'package:get/get.dart';
 
 class MoviesBindings implements Bindings {
