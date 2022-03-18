@@ -42,17 +42,17 @@ class MovieDetailModel {
 
   factory MovieDetailModel.fromMap(Map<String, dynamic> map) {
 
-    var urlImagesPosters = map['images']['poster'];
-    var urlImages = urlImagesPosters?.map<String>((i) => 'http://image.tmdb.org/t/p/w200${i['file_path']}').toList ?? [];
+    var urlImagesPosters = (map['images']['posters'] ?? []);
+    var urlImages = urlImagesPosters?.map<String>((i) => 'https://image.tmdb.org/t/p/w200${i['file_path']}').toList() ?? [];
 
     return MovieDetailModel(
       title: map['title'] ?? '',
       stars: map['vote_average']?.toDouble() ?? 0.0,
-      genre: List<GenreModel>.from(map['genre']?.map((x) => GenreModel.fromMap(x))),
+      genre: List<GenreModel>.from(map['genres']?.map((x) => GenreModel.fromMap(x))),
       urlImages: urlImages,
       releaseDate: DateTime.parse(map['release_date']),
       overview: map['overview'] ?? '',
-      productionCompanies: List<dynamic>.from(map['productionCompanies']).map<String>((p) => p['name']).toList(),
+      productionCompanies: List<dynamic>.from(map['production_companies']).map<String>((p) => p['name']).toList(),
       originalLanguage: map['original_language'] ?? '',
       cast: List<CastModel>.from(
         map['credits']['cast']?.map((x) => CastModel.fromMap(x))),

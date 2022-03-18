@@ -65,9 +65,24 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<List<MovieDetailModel>> getDetail(int id) {
-    // TODO: implement getDetail
-    throw UnimplementedError();
+  Future<MovieDetailModel?> getDetail(int id) async{
+    final result = await _restClient.get<MovieDetailModel?>('/movie/$id', 
+      query: {
+        'api_key': FirebaseRemoteConfig.instance.getString('api_token'),
+        'language': 'pt-br',
+        'append_to_response': 'images,credits',
+        'include_image_language': 'en,pt-br'
+      }, 
+      decoder: (data){
+        return MovieDetailModel.fromMap(data);
+      }
+    );
+
+    if (result.hasError) { 
+      print('Erro ao Buscar detalhes filme [${result.statusCode}]');
+      throw Exception('Erro ao Buscar detalhes filme'); 
+    }
+    return result.body;
   }
 
 }
