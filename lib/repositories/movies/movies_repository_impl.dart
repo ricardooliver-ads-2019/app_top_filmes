@@ -1,4 +1,5 @@
 import 'package:app_top_filmes/application/rest_client/rest_client.dart';
+import 'package:app_top_filmes/models/movie_detail_model.dart';
 import 'package:app_top_filmes/models/movie_model.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 
@@ -61,6 +62,12 @@ class MoviesRepositoryImpl implements MoviesRepository {
       throw Exception('Erro ao buscar filmes popular'); 
     }
     return result.body ?? <MovieModel>[];
+  }
+
+  @override
+  Future<List<MovieDetailModel>> getDetail(int id) {
+    // TODO: implement getDetail
+    throw UnimplementedError();
   }
 
 }
