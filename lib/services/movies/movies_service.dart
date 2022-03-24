@@ -7,4 +7,7 @@ abstract class MoviesService {
   Future<List<MovieModel>> getPopularMovies();
   Future<List<MovieModel>> getTopRated();
   Future<MovieDetailModel?> getDetail(int id);
+  Future<void> addOrRemoveFavorite(String userId, MovieModel movie);
+  Future<List<MovieModel>> getFavoritesMovies(String userId);
+  
 }

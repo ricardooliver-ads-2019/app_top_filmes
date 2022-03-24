@@ -10,7 +10,7 @@ class MovieDetailHeader extends StatelessWidget {
     var movieData = movie;
     if (movieData != null) {  
       return SizedBox(
-        height: 278,
+        height: 220,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: movieData.urlImages.length,
